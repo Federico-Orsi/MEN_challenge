@@ -53,9 +53,9 @@ test('aquí se genera el access token OK', async ()=>{
 
         newPost = {
 
-            title: "yeahhh bitch",
+            title: "come onnn!!",
             author: userId,
-            body: "dale pablaaaaa"
+            body: "I'm a new post"
         }
         const res = await httpClient.post('/api/posts').send(newPost).set('Authorization', `Bearer ${token}`)
         postId = res.body.newPost._id

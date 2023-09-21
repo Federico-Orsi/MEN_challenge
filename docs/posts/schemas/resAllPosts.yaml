@@ -1,0 +1,17 @@
+# Response AllPosts
+
+components:
+  schemas:
+    resAllPosts:
+      type: []
+      # required:
+      #     - posts
+      #   - email
+      properties:
+        posts:
+          type: []
+          description: Todos los posts disponibles actualmente.
+
+      example:
+        posts: []
+

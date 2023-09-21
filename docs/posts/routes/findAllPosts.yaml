@@ -1,0 +1,31 @@
+paths:
+  /api/posts:
+    get:
+      security:
+      - bearerAuth: []
+      summary: Solicita todos los posts.
+      tags:
+      - Posts
+      parameters:
+      - name: Authorization
+        in: Header
+        description: access token.
+        required: true
+        type: string
+      responses:
+        "200":
+          description: all Posts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/resAllPosts'
+        "400":
+          description: Bad request
+        "401":
+          description: Unauthorized Error
+        "404":
+          description: Not found Error
+        "500":
+          description: Internal server error

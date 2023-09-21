@@ -1,0 +1,15 @@
+# New Comment
+
+components:
+  requestBodies:
+    newComment:
+      type: object
+      required:
+        - comment
+      properties:
+        comment:
+          type: string
+          description: El nuevo comentario a realizar sobre el post.
+
+      example:
+        comment: Hello Morfy!!

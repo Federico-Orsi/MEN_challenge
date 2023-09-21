@@ -1,0 +1,29 @@
+paths:
+  /api/auth:
+    post:
+      summary: El usuario se loggea.
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/newUser'
+      responses:
+        "200":
+          description: loggin OK.
+          content:
+            application/json:
+              schema:
+                type: string
+                items:
+                  $ref: '#/components/schemas/token'
+        "400":
+          description: Bad request
+        "401":
+          description: Unauthorized Error
+        "404":
+          description: Not found Error
+        "500":
+          description: Internal server error

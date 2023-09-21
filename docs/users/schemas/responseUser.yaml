@@ -1,0 +1,20 @@
+# Response User
+
+components:
+  schemas:
+    responseUser:
+      type: object
+      required:
+        - _id
+        - email
+      properties:
+        _id:
+          type: string
+          description: El id del nuevo User.
+        email:
+          type: string
+          description: El email del nuevo User.
+
+      example:
+        _id: 4ughd7r3-365n-t5u6-sk85-h58sk23j5k2h
+        email: morfy@gmail.com

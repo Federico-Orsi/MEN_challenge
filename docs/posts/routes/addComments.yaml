@@ -1,0 +1,42 @@
+paths:
+  /api/posts/addComments/{postId}/{commentAuthor}:
+    post:
+      security:
+      - bearerAuth: []
+      summary: Un autor en particular hace un comentario en un post específico.
+      tags:
+      - Posts
+      parameters:
+      - name: postId
+        in: path
+        description: parametro de ruta con el ID del post.
+        required: true
+        type: string
+      - name: commentAuthor
+        in: path
+        description: parametro de ruta con el ID del autor.
+        required: true
+        type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/newComment'
+      responses:
+        "200":
+          description: Muestra el post solicitado con los comentarios (si es que tiene alguno).
+          content:
+            application/json:
+              schema:
+                type: object
+                # items:
+                #   $ref: '#/components/schemas/Ticket'
+        "400":
+          description: Bad request
+        "401":
+          description: Unauthorized Error
+        "404":
+          description: Not found Error
+        "500":
+          description: Internal server error

@@ -1,0 +1,16 @@
+# token
+
+components:
+  schemas:
+    token:
+      type: string
+      required:
+        - token
+      properties:
+        token:
+          type: string
+          description: token generado al loggearse correctamente.
+
+      example:
+        token: ey4ughd7r3-365n-t5u6-sk85-h58sk23j5k2hx
+

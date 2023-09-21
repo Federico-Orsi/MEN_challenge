@@ -1,0 +1,29 @@
+paths:
+  /api/auth/register:
+    post:
+      summary: Registra un nuevo usuario.
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/newUser'
+      responses:
+        "200":
+          description: Nuevo usuario creado.
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/responseUser'
+        "400":
+          description: Bad request
+        "401":
+          description: Unauthorized Error
+        "404":
+          description: Not found Error
+        "500":
+          description: Internal server error

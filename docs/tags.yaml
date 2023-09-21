@@ -1,0 +1,6 @@
+tags:
+  - name: Users
+    description: API para administrar Users.
+
+  - name: Posts
+    description: API para administrar Posts.
